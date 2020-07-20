@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+}
+.nav_link {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+.nav_link:last-child {
+  margin-right: 0;
+}
+.active {
+  color: red;
+  border-bottom: 3px solid red;
+}

@@ -1,0 +1,7 @@
+.moviesPreviewContent {
+  display: flex;
+}
+
+.moviesPreviewOptions {
+  margin-left: 20px;
+}
