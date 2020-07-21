@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MoviesList from '../components/MoviesList';
+import Notification from '../components/Notification';
 
 import moviesApi from '../services/moviesApi';
 import routes from '../routes';
@@ -20,11 +21,13 @@ class HomePageView extends Component {
   }
 
   render() {
-    const { movies } = this.state;
+    const { movies, error } = this.state;
     return (
       <>
+        {error && <Notification message={`ERROR: ${error.message}`} />}
+
         <h1>Popular movies today</h1>
-        <MoviesList movies={movies} url={routes.movies} />
+        {!error && movies && <MoviesList movies={movies} url={routes.movies} />}
       </>
     );
   }

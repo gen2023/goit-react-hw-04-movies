@@ -2,15 +2,15 @@
   this['webpackJsonpgoit-react-hw-04-movies'] || []).push([
   [6],
   {
-    51: function (e, t, n) {
+    53: function (e, t, n) {
       'use strict';
-      var a = n(54),
+      var a = n(56),
         r = n.n(a),
-        c = n(55),
-        u = n(58),
+        c = n(57),
+        u = n(60),
         o = n.n(u);
       o.a.defaults.baseURL = 'https://api.themoviedb.org/3';
-      var i = '7d9df5dfa812832fa78dacf66d6dbcaa';
+      var s = '7d9df5dfa812832fa78dacf66d6dbcaa';
       t.a = {
         getPopularMovie: function () {
           return Object(c.a)(
@@ -22,7 +22,7 @@
                       return (
                         (e.next = 2),
                         o.a
-                          .get('/trending/movie/day?api_key='.concat(i))
+                          .get('/trending/movie/day?api_key='.concat(s))
                           .then(function (e) {
                             return e.data.results;
                           })
@@ -49,7 +49,7 @@
                         o.a
                           .get(
                             '/search/movie?api_key='
-                              .concat(i, '&language=en-US&query=')
+                              .concat(s, '&language=en-US&query=')
                               .concat(e, '&page=1&include_adult=false'),
                           )
                           .then(function (e) {
@@ -79,7 +79,7 @@
                           .get(
                             '/movie/'
                               .concat(e, '?api_key=')
-                              .concat(i, '&language=en-US'),
+                              .concat(s, '&language=en-US'),
                           )
                           .then(function (e) {
                             return e.data;
@@ -108,7 +108,7 @@
                           .get(
                             '/movie/'
                               .concat(e, '/reviews?api_key=')
-                              .concat(i, '&language=en-US&page=1'),
+                              .concat(s, '&language=en-US&page=1'),
                           )
                           .then(function (e) {
                             return e.data.results;
@@ -135,7 +135,7 @@
                         (t.next = 2),
                         o.a
                           .get(
-                            '/movie/'.concat(e, '/credits?api_key=').concat(i),
+                            '/movie/'.concat(e, '/credits?api_key=').concat(s),
                           )
                           .then(function (e) {
                             return e.data.cast;
@@ -153,7 +153,7 @@
         },
       };
     },
-    59: function (e, t, n) {
+    61: function (e, t, n) {
       'use strict';
       n.d(t, 'a', function () {
         return o;
@@ -190,19 +190,23 @@
           );
         });
     },
-    89: function (e, t, n) {
+    93: function (e, t, n) {
       'use strict';
       n.r(t);
-      var a = n(52),
-        r = n(53),
-        c = n(57),
-        u = n(56),
+      var a = n(54),
+        r = n(55),
+        c = n(59),
+        u = n(58),
         o = n(0),
-        i = n.n(o),
-        s = n(59),
-        f = n(51),
+        s = n.n(o),
+        i = n(61),
+        f = function (e) {
+          var t = e.message;
+          return s.a.createElement('div', null, t);
+        },
+        l = n(53),
         p = n(7),
-        l = (function (e) {
+        v = (function (e) {
           Object(c.a)(n, e);
           var t = Object(u.a)(n);
           function n() {
@@ -224,7 +228,7 @@
                 key: 'componentDidMount',
                 value: function () {
                   var e = this;
-                  f.a
+                  l.a
                     .getPopularMovie()
                     .then(function (t) {
                       e.setState({ movies: t });
@@ -237,12 +241,20 @@
               {
                 key: 'render',
                 value: function () {
-                  var e = this.state.movies;
-                  return i.a.createElement(
-                    i.a.Fragment,
+                  var e = this.state,
+                    t = e.movies,
+                    n = e.error;
+                  return s.a.createElement(
+                    s.a.Fragment,
                     null,
-                    i.a.createElement('h1', null, 'Popular movies today'),
-                    i.a.createElement(s.a, { movies: e, url: p.a.movies }),
+                    n &&
+                      s.a.createElement(f, {
+                        message: 'ERROR: '.concat(n.message),
+                      }),
+                    s.a.createElement('h1', null, 'Popular movies today'),
+                    !n &&
+                      t &&
+                      s.a.createElement(i.a, { movies: t, url: p.a.movies }),
                   );
                 },
               },
@@ -250,8 +262,8 @@
             n
           );
         })(o.Component);
-      t.default = l;
+      t.default = v;
     },
   },
 ]);
-//# sourceMappingURL=6.f683fc6f.chunk.js.map
+//# sourceMappingURL=6.5302cd13.chunk.js.map

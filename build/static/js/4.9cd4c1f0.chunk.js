@@ -2,12 +2,12 @@
   this['webpackJsonpgoit-react-hw-04-movies'] || []).push([
   [4],
   {
-    51: function (e, t, n) {
+    53: function (e, t, n) {
       'use strict';
-      var a = n(54),
+      var a = n(56),
         r = n.n(a),
-        c = n(55),
-        o = n(58),
+        c = n(57),
+        o = n(60),
         u = n.n(o);
       u.a.defaults.baseURL = 'https://api.themoviedb.org/3';
       var i = '7d9df5dfa812832fa78dacf66d6dbcaa';
@@ -153,12 +153,12 @@
         },
       };
     },
-    87: function (e, t, n) {},
-    88: function (e, t, n) {},
-    91: function (e, t, n) {
+    89: function (e, t, n) {},
+    90: function (e, t, n) {},
+    92: function (e, t, n) {
       'use strict';
       n.r(t);
-      var a = n(54),
+      var a = n(56),
         r = n.n(a);
       function c(e, t, n) {
         return (
@@ -204,17 +204,17 @@
         }
         return e;
       }
-      var i = n(55),
-        s = n(52),
-        l = n(53),
-        p = n(57),
-        v = n(56),
+      var i = n(57),
+        s = n(54),
+        l = n(55),
+        p = n(59),
+        v = n(58),
         m = n(0),
         f = n.n(m),
         h = n(9),
         d = n(2),
-        b =
-          (n(87),
+        g =
+          (n(89),
           function (e) {
             var t = e.poster_path,
               n = e.title,
@@ -253,9 +253,9 @@
               ),
             );
           }),
-        g = n(51),
+        b = n(53),
         w =
-          (n(88),
+          (n(90),
           (function (e) {
             Object(p.a)(n, e);
             var t = Object(v.a)(n);
@@ -288,7 +288,7 @@
                               switch ((e.prev = e.next)) {
                                 case 0:
                                   (t = this.props.match.params.movieId),
-                                    g.a
+                                    b.a
                                       .getCast(t)
                                       .then(function (e) {
                                         n.setState({ cast: e });
@@ -381,7 +381,7 @@
                             switch ((e.prev = e.next)) {
                               case 0:
                                 (t = this.props.match.params.movieId),
-                                  g.a
+                                  b.a
                                     .getReviews(t)
                                     .then(function (e) {
                                       n.setState({ reviews: e });
@@ -441,8 +441,9 @@
             n
           );
         })(m.Component),
-        y = n(7),
-        E = (function (e) {
+        y = n(16),
+        E = n(7),
+        j = (function (e) {
           Object(p.a)(n, e);
           var t = Object(v.a)(n);
           function n() {
@@ -469,7 +470,7 @@
                   null === (t = a.state) ||
                   void 0 === t
                     ? void 0
-                    : t.from) || y.a.home,
+                    : t.from) || E.a.homePage,
                 );
               }),
               e
@@ -490,7 +491,7 @@
                             switch ((e.prev = e.next)) {
                               case 0:
                                 (t = this.props.match.params.movieId),
-                                  g.a
+                                  b.a
                                     .getMovieDetails(t)
                                     .then(function (e) {
                                       n.setState(u({}, e));
@@ -533,7 +534,7 @@
                       'GO BACK',
                     ),
                     t &&
-                      f.a.createElement(b, {
+                      f.a.createElement(g, {
                         poster_path: t,
                         title: n,
                         vote_average: a,
@@ -541,32 +542,41 @@
                         genres: c,
                         release_date: u,
                       }),
-                    f.a.createElement('hr', null),
-                    f.a.createElement('h3', null, 'Additional information'),
                     f.a.createElement(
-                      h.b,
-                      { to: '/movies/'.concat(o, '/cast') },
-                      'cast',
+                      'div',
+                      { className: 'sectionLink' },
+                      f.a.createElement('h3', null, 'Additional information'),
+                      f.a.createElement(
+                        h.b,
+                        { to: '/movies/'.concat(o, '/cast') },
+                        'cast',
+                      ),
+                      f.a.createElement(
+                        h.b,
+                        { to: '/movies/'.concat(o, '/reviews') },
+                        'reviews',
+                      ),
                     ),
-                    f.a.createElement('br', null),
                     f.a.createElement(
-                      h.b,
-                      { to: '/movies/'.concat(o, '/reviews') },
-                      'reviews',
+                      m.Suspense,
+                      { fallback: f.a.createElement(y.a, null) },
+                      f.a.createElement(
+                        d.c,
+                        null,
+                        f.a.createElement(d.a, {
+                          path: E.a.cast,
+                          render: function (e) {
+                            return f.a.createElement(w, e);
+                          },
+                        }),
+                        f.a.createElement(d.a, {
+                          path: E.a.reviews,
+                          render: function (e) {
+                            return f.a.createElement(O, e);
+                          },
+                        }),
+                      ),
                     ),
-                    f.a.createElement('hr', null),
-                    f.a.createElement(d.a, {
-                      path: y.a.Cast,
-                      render: function (e) {
-                        return f.a.createElement(w, e);
-                      },
-                    }),
-                    f.a.createElement(d.a, {
-                      path: y.a.Reviews,
-                      render: function (e) {
-                        return f.a.createElement(O, e);
-                      },
-                    }),
                   );
                 },
               },
@@ -574,8 +584,8 @@
             n
           );
         })(m.Component);
-      t.default = E;
+      t.default = j;
     },
   },
 ]);
-//# sourceMappingURL=4.6bb95df6.chunk.js.map
+//# sourceMappingURL=4.9cd4c1f0.chunk.js.map

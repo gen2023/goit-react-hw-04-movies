@@ -1,10 +1,10 @@
 (this['webpackJsonpgoit-react-hw-04-movies'] =
   this['webpackJsonpgoit-react-hw-04-movies'] || []).push([
   [0],
-  Array(50).concat([
+  Array(52).concat([
     function (t, e, r) {
       'use strict';
-      var n = r(60),
+      var n = r(62),
         o = Object.prototype.toString;
       function i(t) {
         return '[object Array]' === o.call(t);
@@ -151,7 +151,7 @@
       });
     },
     function (t, e, r) {
-      t.exports = r(68);
+      t.exports = r(70);
     },
     function (t, e, r) {
       'use strict';
@@ -273,7 +273,7 @@
       });
     },
     function (t, e, r) {
-      t.exports = r(69);
+      t.exports = r(71);
     },
     ,
     function (t, e, r) {
@@ -288,7 +288,7 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(50);
+      var n = r(52);
       function o(t) {
         return encodeURIComponent(t)
           .replace(/%40/gi, '@')
@@ -336,8 +336,8 @@
     function (t, e, r) {
       'use strict';
       (function (e) {
-        var n = r(50),
-          o = r(75),
+        var n = r(52),
+          o = r(77),
           i = { 'Content-Type': 'application/x-www-form-urlencoded' };
         function a(t, e) {
           !n.isUndefined(t) &&
@@ -351,7 +351,7 @@
               ('undefined' !== typeof XMLHttpRequest ||
                 ('undefined' !== typeof e &&
                   '[object process]' === Object.prototype.toString.call(e))) &&
-                (t = r(64)),
+                (t = r(66)),
               t
             );
           })(),
@@ -403,17 +403,17 @@
             u.headers[t] = n.merge(i);
           }),
           (t.exports = u);
-      }.call(this, r(74)));
+      }.call(this, r(76)));
     },
     function (t, e, r) {
       'use strict';
-      var n = r(50),
-        o = r(76),
-        i = r(61),
-        a = r(78),
-        u = r(81),
-        c = r(82),
-        s = r(65);
+      var n = r(52),
+        o = r(78),
+        i = r(63),
+        a = r(80),
+        u = r(83),
+        c = r(84),
+        s = r(67);
       t.exports = function (t) {
         return new Promise(function (e, f) {
           var p = t.data,
@@ -472,7 +472,7 @@
             }),
             n.isStandardBrowserEnv())
           ) {
-            var v = r(83),
+            var v = r(85),
               g =
                 (t.withCredentials || c(m)) && t.xsrfCookieName
                   ? v.read(t.xsrfCookieName)
@@ -511,7 +511,7 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(77);
+      var n = r(79);
       t.exports = function (t, e, r, o, i) {
         var a = new Error(t);
         return n(a, e, r, o, i);
@@ -519,7 +519,7 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(50);
+      var n = r(52);
       t.exports = function (t, e) {
         e = e || {};
         var r = {},
@@ -978,37 +978,37 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(50),
-        o = r(60),
-        i = r(70),
-        a = r(66);
+      var n = r(52),
+        o = r(62),
+        i = r(72),
+        a = r(68);
       function u(t) {
         var e = new i(t),
           r = o(i.prototype.request, e);
         return n.extend(r, i.prototype, e), n.extend(r, e), r;
       }
-      var c = u(r(63));
+      var c = u(r(65));
       (c.Axios = i),
         (c.create = function (t) {
           return u(a(c.defaults, t));
         }),
-        (c.Cancel = r(67)),
-        (c.CancelToken = r(84)),
-        (c.isCancel = r(62)),
+        (c.Cancel = r(69)),
+        (c.CancelToken = r(86)),
+        (c.isCancel = r(64)),
         (c.all = function (t) {
           return Promise.all(t);
         }),
-        (c.spread = r(85)),
+        (c.spread = r(87)),
         (t.exports = c),
         (t.exports.default = c);
     },
     function (t, e, r) {
       'use strict';
-      var n = r(50),
-        o = r(61),
-        i = r(71),
-        a = r(72),
-        u = r(66);
+      var n = r(52),
+        o = r(63),
+        i = r(73),
+        a = r(74),
+        u = r(68);
       function c(t) {
         (this.defaults = t),
           (this.interceptors = { request: new i(), response: new i() });
@@ -1059,7 +1059,7 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(50);
+      var n = r(52);
       function o() {
         this.handlers = [];
       }
@@ -1081,10 +1081,10 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(50),
-        o = r(73),
-        i = r(62),
-        a = r(63);
+      var n = r(52),
+        o = r(75),
+        i = r(64),
+        a = r(65);
       function u(t) {
         t.cancelToken && t.cancelToken.throwIfRequested();
       }
@@ -1130,7 +1130,7 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(50);
+      var n = r(52);
       t.exports = function (t, e, r) {
         return (
           n.forEach(r, function (r) {
@@ -1257,7 +1257,7 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(50);
+      var n = r(52);
       t.exports = function (t, e) {
         n.forEach(t, function (r, n) {
           n !== e &&
@@ -1268,7 +1268,7 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(65);
+      var n = r(67);
       t.exports = function (t, e, r) {
         var o = r.config.validateStatus;
         !o || o(r.status)
@@ -1313,8 +1313,8 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(79),
-        o = r(80);
+      var n = r(81),
+        o = r(82);
       t.exports = function (t, e) {
         return t && !n(e) ? o(t, e) : e;
       };
@@ -1333,7 +1333,7 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(50),
+      var n = r(52),
         o = [
           'age',
           'authorization',
@@ -1381,7 +1381,7 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(50);
+      var n = r(52);
       t.exports = n.isStandardBrowserEnv()
         ? (function () {
             var t,
@@ -1421,7 +1421,7 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(50);
+      var n = r(52);
       t.exports = n.isStandardBrowserEnv()
         ? {
             write: function (t, e, r, o, i, a) {
@@ -1453,7 +1453,7 @@
     },
     function (t, e, r) {
       'use strict';
-      var n = r(67);
+      var n = r(69);
       function o(t) {
         if ('function' !== typeof t)
           throw new TypeError('executor must be a function.');
@@ -1490,4 +1490,4 @@
     },
   ]),
 ]);
-//# sourceMappingURL=0.e4d40e6a.chunk.js.map
+//# sourceMappingURL=0.c1347e0b.chunk.js.map

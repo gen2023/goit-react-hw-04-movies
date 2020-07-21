@@ -2,12 +2,12 @@
   this['webpackJsonpgoit-react-hw-04-movies'] || []).push([
   [5],
   {
-    51: function (e, t, n) {
+    53: function (e, t, n) {
       'use strict';
-      var r = n(54),
+      var r = n(56),
         a = n.n(r),
-        o = n(55),
-        c = n(58),
+        o = n(57),
+        c = n(60),
         u = n.n(c);
       u.a.defaults.baseURL = 'https://api.themoviedb.org/3';
       var i = '7d9df5dfa812832fa78dacf66d6dbcaa';
@@ -153,7 +153,7 @@
         },
       };
     },
-    59: function (e, t, n) {
+    61: function (e, t, n) {
       'use strict';
       n.d(t, 'a', function () {
         return u;
@@ -190,8 +190,8 @@
           );
         });
     },
-    86: function (e, t, n) {},
-    90: function (e, t, n) {
+    88: function (e, t, n) {},
+    91: function (e, t, n) {
       'use strict';
       function r(e, t) {
         (null == t || t > e.length) && (t = e.length);
@@ -230,15 +230,15 @@
         );
       }
       n.r(t);
-      var o = n(52),
-        c = n(53),
-        u = n(57),
-        i = n(56),
+      var o = n(54),
+        c = n(55),
+        u = n(59),
+        i = n(58),
         s = n(0),
         l = n.n(s),
-        f = n(59),
+        f = n(61),
         d = n(14),
-        m = (n(86), document.querySelector('#modal-root')),
+        m = (n(88), document.querySelector('#modal-root')),
         p = (function (e) {
           Object(u.a)(n, e);
           var t = Object(i.a)(n);
@@ -298,7 +298,7 @@
             n
           );
         })(s.Component),
-        h = n(51),
+        h = n(53),
         v = (function (e) {
           Object(u.a)(n, e);
           var t = Object(i.a)(n);
@@ -411,4 +411,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5.262b84b5.chunk.js.map
+//# sourceMappingURL=5.6f258b08.chunk.js.map

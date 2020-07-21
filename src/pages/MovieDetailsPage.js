@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import PropTypes from 'prop-types';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 
 import MoviesPreview from '../components/MoviesPreview';
 import Cast from '../components/Cast';
 import Reviews from '../components/Reviews';
+import Loader from '../components/Loader';
 
 import moviesApi from '../services/moviesApi';
 import routes from '../routes';
@@ -32,7 +33,7 @@ class MovieDetailsPage extends Component {
 
   handleGoBack = () => {
     const { location, history } = this.props;
-    history.push(location?.state?.from || routes.home);
+    history.push(location?.state?.from || routes.homePage);
   };
 
   render() {
@@ -61,15 +62,21 @@ class MovieDetailsPage extends Component {
             release_date={release_date}
           />
         )}
-        <hr />
-        <h3>Additional information</h3>
-        <Link to={`/movies/${id}/cast`}>cast</Link>
-        <br />
-        <Link to={`/movies/${id}/reviews`}>reviews</Link>
-        <hr />
+        <div className="sectionLink">
+          <h3>Additional information</h3>
+          <Link to={`/movies/${id}/cast`}>cast</Link>
 
-        <Route path={routes.Cast} render={props => <Cast {...props} />} />
-        <Route path={routes.Reviews} render={props => <Reviews {...props} />} />
+          <Link to={`/movies/${id}/reviews`}>reviews</Link>
+        </div>
+        <Suspense fallback={<Loader />}>
+          <Switch>
+            <Route path={routes.cast} render={props => <Cast {...props} />} />
+            <Route
+              path={routes.reviews}
+              render={props => <Reviews {...props} />}
+            />
+          </Switch>
+        </Suspense>
       </>
     );
   }

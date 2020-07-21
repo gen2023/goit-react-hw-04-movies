@@ -5,6 +5,7 @@ import AppBar from './AppBar';
 import Loader from './Loader';
 
 import routes from '../routes';
+import './appStyle.css';
 import '../../node_modules/modern-normalize/modern-normalize.css';
 
 const HomePage = lazy(() => import('../pages/HomePage.js'));
